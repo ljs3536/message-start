@@ -27,3 +27,28 @@ addForm.html
 메시지와 국제화 기능을 직접 구현할 수도 있겠지만, 스프링은 기본적인 메시지와 국제화 기능을 모두 제공한다.
 그리고 타임리프도 스프링이 제공하는 메시지와 국제화 기능을 편리하게 통합해서 제공한다.
 
+## 스프링 메시지 소스 설정
+스프링은 기본적인 메시지 관리 기능을 제공한다.
+메시지 관리기능을 사용하려면 스프링이 제공하는 MessageSource를 스프링 빈으로 등록하면 되는데,
+MessageSource는 인터페이스이다.
+따라서 구현체인 ResourceBundleMessageSource를 스프링 빈으로 등록하면 된다.
+
+### 스프링부트
+스프링부트를 사용하면 스프링 부트가 MessageSource를 자동으로 스프링 빈으로 등록한다.
+
+#### 스프링 부트 메시지 소스 설정
+
+application.properties
+springmessages.basename=messages,config.i18n.messages
+
+#### 스프링 부트 메시지 소스 기본값
+springmessages.basename=messages
+MessageSource를 스프링 빈으로 등록하지 않고, 스프링 부트와 관련된 별도의 설정을 하지 않으면
+messages라는 이름으로 기본 등록된다. 
+따라서 messages_ko.properties, messages.properties 파일만 등록하면 자동으로 인식된다.
+
+### 메시지 파일 만들기
+
+- messages.properties : 기본값으로 사용(한글)
+- messages_en.properties : 영어
+
