@@ -52,3 +52,11 @@ messages라는 이름으로 기본 등록된다.
 - messages.properties : 기본값으로 사용(한글)
 - messages_en.properties : 영어
 
+# /24-10-13
+
+## 스프링 메시지 소스 사용
+
+### MessageSource 인터페이스
+
+
+
