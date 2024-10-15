@@ -71,5 +71,8 @@ messages라는 이름으로 기본 등록된다.
 hello.name = 안녕 {0}
 `<p th:text="#{hello.name(${item.itemName})}"></p>`
 
+# /24-10-15
+
+## 웹 애플리케이션에 국제화 적용하기 
 
 
